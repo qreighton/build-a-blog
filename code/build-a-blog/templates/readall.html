@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+{% block content %}
+
+
+    <span>page to start</span>
+    <input type = "text" name ="offset" value="{{offset}}"/>
+    <span>how many per page</span>
+    <input type = "text" name ="limit" value="{{limit}}"/>
+    <input type = "submit"/>
+    <div class = "error">{{error}}</div>
+    <hr>
+{% for blog in blogs %}
+    <div class = "blog">
+        <div class = "blog-title">{{blog.title}}</div>
+        <a class = "permalink">ID = {{blog.key().id()}}</a>
+        <pre class = "blog-body">{{blog.blog}}</pre>
+    </div>
+{% endfor %}
+<a href="/readall?page=1&offset={{offset}}&limit={{limit}}">{{pageup}}</a>
+<a href="/readall?page=-1&offset={{offset}}&limit={{limit}}">{{pageback}}</a>
+<span>{{p,offset,limit}}</span>
+<hr>
+</form>
+{% endblock %}

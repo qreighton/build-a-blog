@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+{% block content %}
+
+    <div id="five"> The five most recent entries</div>
+    <hr>
+{% for blog in blogs %}
+    <div class = "blog">
+        <div class = "blog-title">{{blog.title}}</div>
+        <a class = "permalink" href="/blog/{{blog.key().id()}}">ID = {{blog.key().id()}}</a>
+        <pre class = "blog-body">{{blog.blog}}</pre>
+    </div>
+{% endfor %}
+<hr>
+</form>
+{% endblock %}

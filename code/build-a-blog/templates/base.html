@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css"/>
+        <title>Dans Blog</title>
+    </head>
+    <body>
+        <form method="post">
+        <h1>Dans Blog</h1>
+        <hr id ="seven">
+        <!--<a id ="nine" href ="/readall"> To see all blogs</a>--> 
+        <a id ="two" href ="/newpost">  To add a Blog   </a>
+        <a id ="one" href ="/">Main Page   </a>
+        <span id ="three">To see specific blog enter ID</span>
+        <input type = "text" name = "id"/>
+        <input type ="submit">
+        <hr id="four">
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>

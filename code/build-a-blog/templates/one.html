@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block content %}
+
+<hr>
+
+    <div class = "blog">
+        <div class = "blog-title">{{b.title}}</div>
+        <div class = "permalink">{{key}}</div>
+        <pre class = "blog-body">{{b.blog}}</pre>
+        <div class ="error">{{error}}</div>
+    </div>
+<hr>
+</form>
+{% endblock %}
